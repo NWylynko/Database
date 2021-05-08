@@ -39,6 +39,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@tsconfig/node14", "npm:1.0.0"],
             ["@types/node", "npm:15.0.2"],
+            ["@types/randomstring", "npm:1.1.6"],
+            ["randomstring", "npm:1.1.5"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
           ],
           "linkType": "SOFT",
@@ -51,6 +53,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nwylynko/database", "workspace:."],
             ["@tsconfig/node14", "npm:1.0.0"],
             ["@types/node", "npm:15.0.2"],
+            ["@types/randomstring", "npm:1.1.6"],
+            ["randomstring", "npm:1.1.5"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
           ],
           "linkType": "SOFT",
@@ -70,6 +74,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-15.0.2-433fc3c944-ea8dd741bf.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:15.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/randomstring", [
+        ["npm:1.1.6", {
+          "packageLocation": "./.yarn/cache/@types-randomstring-npm-1.1.6-b5e5097553-9ab87c9f60.zip/node_modules/@types/randomstring/",
+          "packageDependencies": [
+            ["@types/randomstring", "npm:1.1.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["array-uniq", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/array-uniq-npm-1.0.2-4f35ce673e-2b7ad4e3ac.zip/node_modules/array-uniq/",
+          "packageDependencies": [
+            ["array-uniq", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["randomstring", [
+        ["npm:1.1.5", {
+          "packageLocation": "./.yarn/cache/randomstring-npm-1.1.5-70e03b3500-de32000213.zip/node_modules/randomstring/",
+          "packageDependencies": [
+            ["randomstring", "npm:1.1.5"],
+            ["array-uniq", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]

@@ -11,6 +11,8 @@ __metadata:
   dependencies:
     "@tsconfig/node14": ^1.0.0
     "@types/node": ^15.0.2
+    "@types/randomstring": ^1.1.6
+    randomstring: ^1.1.5
     typescript: ^4.2.4
   languageName: unknown
   linkType: soft
@@ -26,6 +28,31 @@ __metadata:
   version: 15.0.2
   resolution: "@types/node@npm:15.0.2"
   checksum: ea8dd741bf16ad3318cca505783b7c211a5c8bea49202f99ba88d2ce8a804e994e1fd1b575b994e434e8b8ead810da966d588ea112998f8fe8d95cd74c396f8a
+  languageName: node
+  linkType: hard
+
+"@types/randomstring@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "@types/randomstring@npm:1.1.6"
+  checksum: 9ab87c9f6072c44321dcf6eac2c54328d4ddeb3ea90273f5eedff8147bdf1069701f8b6dcc6ed14b253bccb75fcb6e97a05c0e68a5a724110062fddbd7a5c667
+  languageName: node
+  linkType: hard
+
+"array-uniq@npm:1.0.2":
+  version: 1.0.2
+  resolution: "array-uniq@npm:1.0.2"
+  checksum: 2b7ad4e3acf54eb4f31229cfe7b9c1f99b0bbe241b8a0ee1e7949bc560daec89655891190e5c7607a503177ac6414c9695636292a292cbe1ebd1bc2fc55ad897
+  languageName: node
+  linkType: hard
+
+"randomstring@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "randomstring@npm:1.1.5"
+  dependencies:
+    array-uniq: 1.0.2
+  bin:
+    randomstring: bin/randomstring
+  checksum: de32000213a998011946d15c5678c835e1300961f225e31315a95d3b94de9007118a86ced1101e5308f171a2a13c782db21d3294cffcf4b0ae46d059b32a7977
   languageName: node
   linkType: hard
 
