@@ -19,14 +19,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "dependencyTreeRoots": [
       {
-        "name": "datebase",
+        "name": "@nwylynko/database",
         "reference": "workspace:."
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["datebase", ["workspace:."]]
+      ["@nwylynko/database", ["workspace:."]]
     ],
     "fallbackPool": [
     ],
@@ -37,6 +37,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@tsconfig/node14", "npm:1.0.0"],
+            ["@types/node", "npm:15.0.2"],
+            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@nwylynko/database", [
+        ["workspace:.", {
+          "packageLocation": "./",
+          "packageDependencies": [
+            ["@nwylynko/database", "workspace:."],
             ["@tsconfig/node14", "npm:1.0.0"],
             ["@types/node", "npm:15.0.2"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
@@ -60,18 +72,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:15.0.2"]
           ],
           "linkType": "HARD",
-        }]
-      ]],
-      ["datebase", [
-        ["workspace:.", {
-          "packageLocation": "./",
-          "packageDependencies": [
-            ["datebase", "workspace:."],
-            ["@tsconfig/node14", "npm:1.0.0"],
-            ["@types/node", "npm:15.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
-          ],
-          "linkType": "SOFT",
         }]
       ]],
       ["typescript", [
