@@ -1,0 +1,31 @@
+{
+  "name": "datebase",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NWylynko/Datebase.git"
+  },
+  "keywords": [
+    "database",
+    "mysql",
+    "sqlite"
+  ],
+  "author": {
+    "name": "Nick Wylynko",
+    "email": "nick@wylynko.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NWylynko/Datebase/issues"
+  },
+  "homepage": "https://github.com/NWylynko/Datebase",
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.0",
+    "@types/node": "^15.0.2",
+    "typescript": "^4.2.4"
+  }
+}
