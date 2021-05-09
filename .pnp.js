@@ -38,8 +38,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@tsconfig/node14", "npm:1.0.0"],
+            ["@types/mysql", "npm:2.15.18"],
             ["@types/node", "npm:15.0.2"],
             ["@types/randomstring", "npm:1.1.6"],
+            ["mysql", "npm:2.18.1"],
             ["randomstring", "npm:1.1.5"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
           ],
@@ -52,8 +54,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@nwylynko/database", "workspace:."],
             ["@tsconfig/node14", "npm:1.0.0"],
+            ["@types/mysql", "npm:2.15.18"],
             ["@types/node", "npm:15.0.2"],
             ["@types/randomstring", "npm:1.1.6"],
+            ["mysql", "npm:2.18.1"],
             ["randomstring", "npm:1.1.5"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
           ],
@@ -65,6 +69,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@tsconfig-node14-npm-1.0.0-cf320499dc-3eda14250e.zip/node_modules/@tsconfig/node14/",
           "packageDependencies": [
             ["@tsconfig/node14", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/mysql", [
+        ["npm:2.15.18", {
+          "packageLocation": "./.yarn/cache/@types-mysql-npm-2.15.18-310111ab59-e45226c4ac.zip/node_modules/@types/mysql/",
+          "packageDependencies": [
+            ["@types/mysql", "npm:2.15.18"],
+            ["@types/node", "npm:15.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -96,6 +110,64 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["bignumber.js", [
+        ["npm:9.0.0", {
+          "packageLocation": "./.yarn/cache/bignumber.js-npm-9.0.0-ce190bcd7c-5968a936fb.zip/node_modules/bignumber.js/",
+          "packageDependencies": [
+            ["bignumber.js", "npm:9.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["core-util-is", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/core-util-is-npm-1.0.2-9fc2b94dc3-089015ee3c.zip/node_modules/core-util-is/",
+          "packageDependencies": [
+            ["core-util-is", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["inherits", [
+        ["npm:2.0.4", {
+          "packageLocation": "./.yarn/cache/inherits-npm-2.0.4-c66b3957a0-98426da247.zip/node_modules/inherits/",
+          "packageDependencies": [
+            ["inherits", "npm:2.0.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["isarray", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/isarray-npm-1.0.0-db4f547720-b0ff31a290.zip/node_modules/isarray/",
+          "packageDependencies": [
+            ["isarray", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["mysql", [
+        ["npm:2.18.1", {
+          "packageLocation": "./.yarn/cache/mysql-npm-2.18.1-8fdb56201f-07c6c6c442.zip/node_modules/mysql/",
+          "packageDependencies": [
+            ["mysql", "npm:2.18.1"],
+            ["bignumber.js", "npm:9.0.0"],
+            ["readable-stream", "npm:2.3.7"],
+            ["safe-buffer", "npm:5.1.2"],
+            ["sqlstring", "npm:2.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["process-nextick-args", [
+        ["npm:2.0.1", {
+          "packageLocation": "./.yarn/cache/process-nextick-args-npm-2.0.1-b8d7971609-ddeb0f07d0.zip/node_modules/process-nextick-args/",
+          "packageDependencies": [
+            ["process-nextick-args", "npm:2.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["randomstring", [
         ["npm:1.1.5", {
           "packageLocation": "./.yarn/cache/randomstring-npm-1.1.5-70e03b3500-de32000213.zip/node_modules/randomstring/",
@@ -106,11 +178,64 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["readable-stream", [
+        ["npm:2.3.7", {
+          "packageLocation": "./.yarn/cache/readable-stream-npm-2.3.7-77b22a9818-6e38265606.zip/node_modules/readable-stream/",
+          "packageDependencies": [
+            ["readable-stream", "npm:2.3.7"],
+            ["core-util-is", "npm:1.0.2"],
+            ["inherits", "npm:2.0.4"],
+            ["isarray", "npm:1.0.0"],
+            ["process-nextick-args", "npm:2.0.1"],
+            ["safe-buffer", "npm:5.1.2"],
+            ["string_decoder", "npm:1.1.1"],
+            ["util-deprecate", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["safe-buffer", [
+        ["npm:5.1.2", {
+          "packageLocation": "./.yarn/cache/safe-buffer-npm-5.1.2-c27fedf6c4-2708587c1b.zip/node_modules/safe-buffer/",
+          "packageDependencies": [
+            ["safe-buffer", "npm:5.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["sqlstring", [
+        ["npm:2.3.1", {
+          "packageLocation": "./.yarn/cache/sqlstring-npm-2.3.1-2d4ffafe98-d10f04099c.zip/node_modules/sqlstring/",
+          "packageDependencies": [
+            ["sqlstring", "npm:2.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["string_decoder", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/string_decoder-npm-1.1.1-e46a6c1353-bc2dc169d8.zip/node_modules/string_decoder/",
+          "packageDependencies": [
+            ["string_decoder", "npm:1.1.1"],
+            ["safe-buffer", "npm:5.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["typescript", [
         ["patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e", {
           "packageLocation": "./.yarn/cache/typescript-patch-70a7929abf-3be4431759.zip/node_modules/typescript/",
           "packageDependencies": [
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["util-deprecate", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/util-deprecate-npm-1.0.2-e3fe1a219c-73c2b1cf02.zip/node_modules/util-deprecate/",
+          "packageDependencies": [
+            ["util-deprecate", "npm:1.0.2"]
           ],
           "linkType": "HARD",
         }]

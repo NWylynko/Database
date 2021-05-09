@@ -1,6 +1,6 @@
 {
   "name": "@nwylynko/database",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "./dist/index.js",
   "engines": {
     "node": ">14"
@@ -38,5 +38,9 @@
   ],
   "dependencies": {
     "randomstring": "^1.1.5"
+  },
+  "optionalDependencies": {
+    "@types/mysql": "^2.15.18",
+    "mysql": "^2.18.1"
   }
 }

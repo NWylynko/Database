@@ -1,59 +1,29 @@
-import randomstring from "randomstring";
-import run from "./utils/run";
+import { generate as generatePassword } from "randomstring";
+import { checkPermissions } from "./checkPermissions";
+import { createDatabase } from "./createDatabase";
 
-type Databases = "mysql" | "mongo";
+export type Databases = "mysql" | "mongo";
 
 const Database = async (type: Databases) => {
+
+  const credentials: DatabaseCredentials = {
+    username: "node",
+    password: generatePassword(),
+    database: "node_app"
+  }
+
   await checkPermissions();
-  const databaseClient = await createDatabase(type)();
+  const databaseClient = await createDatabase(type)(credentials);
 
   return databaseClient;
 };
 
-// export default Database;
+export interface DatabaseCredentials {
+  username: string;
+  password: string;
+  database: string;
+}
 
-const checkPermissions = async () => {
-  try {
-    await run(`which`, [`docker`]);
-    console.log(`docker is installed`);
-  } catch (error) {
-    console.error(`docker not installed`);
-  }
+export const createMongoDatabase = async () => {};
 
-  try {
-    await run(`docker`, [`info`]);
-    console.log(`have permission to use docker`);
-  } catch (error) {
-    console.error(`don't have permission to use docker`);
-  }
-};
-
-const createDatabase = (type: Databases) => {
-  console.log(`type: ${type}`);
-  return {
-    mysql: createMySQLDatabase,
-    mongo: createMongoDatabase,
-  }[type];
-};
-
-const createMySQLDatabase = async () => {
-  const password = randomstring.generate();
-  console.log(`password: ${password}`);
-  const logs = await run("docker", [
-    "create",
-    "-e",
-    "MYSQL_USER=node",
-    "-e",
-    `MYSQL_PASSWORD=${password}`,
-    "-e",
-    "MYSQL_DATABASE=node_app",
-    "mysql:latest",
-  ]);
-  const containerId = logs[logs.length - 1]
-  console.log(`created: ${containerId}`);
-  return;
-};
-
-const createMongoDatabase = async () => {};
-
-Database("mysql");
+export default Database
