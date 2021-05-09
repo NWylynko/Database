@@ -2,7 +2,7 @@ import { generate as generatePassword } from "randomstring";
 import { checkPermissions } from "./checkPermissions";
 import { createDatabase } from "./createDatabase";
 
-export type Databases = "mysql" | "mongo";
+export type Databases = "mysql";
 
 const Database = async (type: Databases) => {
 
