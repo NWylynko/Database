@@ -1,9 +1,9 @@
 {
   "name": "@nwylynko/database",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "engines": {
-    "node": ">14"
+    "node": "<14"
   },
   "scripts": {
     "build": "tsc",
