@@ -1,7 +1,7 @@
 import { generate as generatePassword } from "randomstring";
 import run from "./utils/run";
 import { DatabaseCredentials } from "./index";
-
+import { promisify } from "util";
 
 export async function createMySQLDatabase(credentials: DatabaseCredentials) {
   const rootPassword = generatePassword();
@@ -24,29 +24,21 @@ export async function createMySQLDatabase(credentials: DatabaseCredentials) {
   const containerId = logs[logs.length - 1];
   console.log(`created: ${containerId}`);
 
-
   const mysql = await import("mysql");
   const connection = mysql.createConnection({
-    host: 'localhost',
+    host: "localhost",
     user: credentials.username,
     password: credentials.password,
     database: credentials.database,
   });
-  connection.connect((err) => {
 
-    const close = async () => {
-      return connection.end( async (err) => {
+  await promisify(connection.connect)();
 
-        await run("docker", ["stop", containerId])
-        await run("docker", ["rm", containerId])
+  const close = async () => {
+    await promisify(connection.end)();
+    await run("docker", ["stop", containerId]);
+    await run("docker", ["rm", containerId]);
+  };
 
-        return;
-
-      });
-    }
-
-    return {connection, close};
-
-  });
-
+  return { connection, close };
 }
