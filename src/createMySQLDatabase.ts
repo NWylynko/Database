@@ -40,5 +40,5 @@ export async function createMySQLDatabase(credentials: DatabaseCredentials) {
     await run("docker", ["rm", containerId]);
   };
 
-  return { connection, close };
+  return { db: connection, close };
 }
